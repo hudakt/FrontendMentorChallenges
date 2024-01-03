@@ -1,4 +1,4 @@
-# Frontend Mentor - Frontend quiz app
+# Frontend Mentor - Frontend quiz app test
 
 ![Design preview for the Frontend quiz app coding challenge](./preview.jpg)
 
