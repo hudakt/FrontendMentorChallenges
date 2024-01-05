@@ -1,0 +1,44 @@
+.solutionCard {
+    img {
+        height: auto;
+        width: 100%;
+    }
+
+    .linkWrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(0deg, rgb(39 39 42 / var(--tw-bg-opacity)) 20%, transparent 100%);
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 1em;
+        border-radius: 0.375rem;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: bold;
+            transition: color .5s;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                color: #61dafb;
+            }
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .linkWrapper {
+            padding: 1.4em;
+
+            a {
+                font-size: 1.6em;
+            }
+        }
+    }
+}
