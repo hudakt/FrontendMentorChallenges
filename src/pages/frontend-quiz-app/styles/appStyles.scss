@@ -1,0 +1,13 @@
+@import "./appVariables.scss";
+
+.app-heading-l {
+    @include app-font-heading-l;
+}
+
+.app-heading-l-bold {
+    @include app-font-heading-l(bold);
+}
+
+.app-heading-s {
+    @include app-font-heading-s;
+}

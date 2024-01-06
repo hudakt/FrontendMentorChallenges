@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "./styles/appVariables.scss";
+
+.appRoot {
+    height: 960px;
+    width: 1440px;
+    background-image: url('./assets/images/pattern-background-mobile-light.svg');
+    background-size: cover;
+    font-family: "Rubic";
+    padding: 1rem 1.5rem;
+
+    @include for-tablet-portrait-up {
+        padding: 2.5rem 4rem;
+        background-image: url('./assets/images/pattern-background-tablet-light.svg');
+    }
+
+    @include for-desktop-up {
+        padding: 5rem 8.75rem;
+        background-image: url('./assets/images/pattern-background-desktop-light.svg');
+    }
+}
+

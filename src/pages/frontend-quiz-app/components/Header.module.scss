@@ -1,0 +1,38 @@
+@import "../styles/appVariables.scss";
+@import "../../../styles/variables.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    @include for-tablet-portrait-up {
+        margin-bottom: 2.5rem;
+    }
+
+    @include for-desktop-up {
+        margin-bottom: 5rem;
+    }
+}
+
+.imageWrapper {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+    display: flex;
+
+    img {
+        margin: 15%;
+    }
+
+    @include for-tablet-portrait-up {
+        height: 3.5rem;
+        width: 3.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.accessibility {
+    background-color: $app-light-purple;
+}
