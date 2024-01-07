@@ -1,4 +1,25 @@
 @import "./appVariables.scss";
+@import "../../../styles/variables.scss";
+
+.quiz-option {
+    display: block;
+    padding: .75rem;
+    background: var(--bg-color-secondary);
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    margin-bottom: .75rem;
+    border-radius: .75rem;
+
+    @include for-tablet-landscape-up {
+        padding: 1.125rem 1.25rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    &:focus, &:focus-visible {
+        outline-color: $app-purple;
+        outline-width: 4px;
+    }
+}
 
 .app-font-display {
     font-size: 144px;
@@ -80,6 +101,7 @@
     --text-color-primary: #{$app-dark-navy};    
     --text-color-secondary: #{$app-grey-navy};
     --bg-color-primary: #{$app-light-grey};
+    --bg-color-secondary: #fff;
     --bg-image-desktop: url('../assets/images/pattern-background-desktop-light.svg');
     --bg-image-tablet: url('../assets/images/pattern-background-tablet-light.svg');
     --bg-image-phone: url('../assets/images/pattern-background-mobile-light.svg');
@@ -89,6 +111,7 @@
     --text-color-primary: #fff;
     --text-color-secondary: #{$app-light-bluish};
     --bg-color-primary: #{$app-dark-navy};
+    --bg-color-secondary: #{$app-navy};
     --bg-image-desktop: url('../assets/images/pattern-background-desktop-dark.svg');
     --bg-image-tablet: url('../assets/images/pattern-background-tablet-dark.svg');
     --bg-image-phone: url('../assets/images/pattern-background-mobile-dark.svg');

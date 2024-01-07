@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.scss';
 import Shell from './pages/shell/Shell';
 import FrontendQuizApp from './pages/frontend-quiz-app/FrontendQuizApp';
+import HomePage from './pages/frontend-quiz-app/components/HomePage';
+import QuizPage from './pages/frontend-quiz-app/components/QuizPage';
 
 const router = createBrowserRouter([
   {
@@ -10,8 +12,18 @@ const router = createBrowserRouter([
     element: <Shell />
   },
   {
-    path: 'frontend-quiz-app',
-    element: <FrontendQuizApp />
+    path: '/frontend-quiz-app',
+    element: <FrontendQuizApp />,
+    children: [
+      {
+        path: '/frontend-quiz-app',
+        element: <HomePage />
+      },
+      {
+        path: '/frontend-quiz-app/quiz',
+        element: <QuizPage />
+      }
+    ]
   }
 ]);
 

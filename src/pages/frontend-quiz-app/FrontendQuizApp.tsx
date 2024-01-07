@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import favicon from './assets/images/favicon-32x32.png';
 import { initTitleAndIcon } from "../../common/effectFunctions";
 import classes from './FrontendQuizApp.module.scss';
-import Heading from "./components/Heading";
 import Header from "./components/Header";
 import AppContext from "./store/AppContext";
 import './styles/appStyles.scss';
+import { Outlet } from "react-router-dom";
 
 const FrontendQuizApp = () => {
     useEffect(() => {
@@ -34,7 +34,7 @@ const FrontendQuizApp = () => {
             <div className="min-h-screen flex justify-center items-center">
                 <div className={`${classes.appRoot} ${theme}`}>
                     <Header />
-                    <Heading regularHeadingValue="Welcome to the" boldHeadingValue="Frontend Quiz!" caption="Pick a subject to get started"/>
+                    <Outlet/>
                 </div>
             </div>
         </AppContext.Provider>

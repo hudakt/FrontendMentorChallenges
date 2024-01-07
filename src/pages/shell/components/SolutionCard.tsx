@@ -1,4 +1,5 @@
 import classes from './SolutionCard.module.scss';
+import { Link } from 'react-router-dom';
 
 interface SolutionCardProps {
     route: string;
@@ -12,7 +13,7 @@ const SolutionCard: React.FC<SolutionCardProps> = (props) => {
             <div className="flex flex-col w-auto bg-gray-400 rounded-md shadow-md relative">
                 <img className='rounded-md' src={props.previewSrc} alt="Preview of completed solution" />
                 <div className={classes.linkWrapper}>
-                    <a href={props.route}>{props.name}</a>
+                    <Link to={props.route}>{props.name}</Link>
                 </div>
             </div>
         </div>

@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.optionsWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include for-desktop-up {
+        width: 50%;
+    }
+}
