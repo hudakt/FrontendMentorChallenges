@@ -1,13 +1,95 @@
 @import "./appVariables.scss";
 
-.app-heading-l {
-    @include app-font-heading-l;
+.app-font-display {
+    font-size: 144px;
+    line-height: 100%;
+    font-weight: bold;
+    color: var(--text-color-primary);
+
+    @include for-phone-only {
+        font-size: 88px;
+    }
 }
 
-.app-heading-l-bold {
-    @include app-font-heading-l(bold);
+.app-font-heading-l {
+    font-size: 64px;
+    line-height: 100%;
+    color: var(--text-color-primary);
+
+    &.app-font-bold {
+        font-weight: bold;
+    }
+
+    @include for-phone-only {
+        font-size: 40px;
+    }
 }
 
-.app-heading-s {
-    @include app-font-heading-s;
+.app-font-heading-m {
+    font-size: 36px;
+    line-height: 100%;
+    color: var(--text-color-primary);
+
+    &.app-font-bold {
+        font-weight: bold;
+    }
+
+    @include for-phone-only {
+        font-size: 20px;
+    }
+}
+
+.app-font-heading-s {
+    font-size: 28px;
+    line-height: 100%;
+    color: var(--text-color-primary);
+
+    &.app-font-bold {
+        font-weight: bold;
+    }
+
+    @include for-phone-only {
+        font-size: 18px;
+    }
+}
+
+.app-font-body-s {
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: normal;
+    color: var(--text-color-primary);
+
+    @include for-phone-only {
+        font-size: 18px;
+    }
+}
+
+.app-font-body-s-italic {
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--text-color-secondary);
+
+    @include for-phone-only {
+        font-size: 14px;
+    }
+}
+
+.light {
+    --text-color-primary: #{$app-dark-navy};    
+    --text-color-secondary: #{$app-grey-navy};
+    --bg-color-primary: #{$app-light-grey};
+    --bg-image-desktop: url('../assets/images/pattern-background-desktop-light.svg');
+    --bg-image-tablet: url('../assets/images/pattern-background-tablet-light.svg');
+    --bg-image-phone: url('../assets/images/pattern-background-mobile-light.svg');
+}
+
+.dark {
+    --text-color-primary: #fff;
+    --text-color-secondary: #{$app-light-bluish};
+    --bg-color-primary: #{$app-dark-navy};
+    --bg-image-desktop: url('../assets/images/pattern-background-desktop-dark.svg');
+    --bg-image-tablet: url('../assets/images/pattern-background-tablet-dark.svg');
+    --bg-image-phone: url('../assets/images/pattern-background-mobile-dark.svg');
 }

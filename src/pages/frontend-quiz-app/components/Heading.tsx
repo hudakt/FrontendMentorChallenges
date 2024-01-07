@@ -11,14 +11,14 @@ const Heading: React.FC<HeadingProps> = (props) => {
     return (
         <header className={classes.headingWrapper}>
             <h1>
-                <span>
+                <span className="app-font-heading-l">
                     {props.regularHeadingValue}
                 </span>
-                <span>
+                <span className="app-font-heading-l app-font-bold">
                     {props.boldHeadingValue}
                 </span>
             </h1>
-            <p>{props.caption}</p>
+            <p className="app-font-body-s-italic">{props.caption}</p>
         </header>
     )
 }

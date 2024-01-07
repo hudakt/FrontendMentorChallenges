@@ -86,5 +86,11 @@
         -webkit-transform: translateX(1.25rem);
         -ms-transform: translateX(1.25rem);
         transform: translateX(1.25rem);
+
+        @include for-phone-only {
+            -webkit-transform: translateX(0.75rem);
+            -ms-transform: translateX(0.75rem);
+            transform: translateX(0.75rem);
+        }
     }
 }

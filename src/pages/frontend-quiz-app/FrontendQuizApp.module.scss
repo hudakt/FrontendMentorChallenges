@@ -4,19 +4,19 @@
 .appRoot {
     height: 960px;
     width: 1440px;
-    background-image: url('./assets/images/pattern-background-mobile-light.svg');
+    background-color: var(--bg-color-primary);
+    background-image: var(--bg-image-phone);
     background-size: cover;
     font-family: "Rubic";
     padding: 1rem 1.5rem;
 
     @include for-tablet-portrait-up {
         padding: 2.5rem 4rem;
-        background-image: url('./assets/images/pattern-background-tablet-light.svg');
+        background-image: var(--bg-image-tablet);
     }
 
     @include for-desktop-up {
         padding: 5rem 8.75rem;
-        background-image: url('./assets/images/pattern-background-desktop-light.svg');
+        background-image: var(--bg-image-desktop);
     }
 }
-

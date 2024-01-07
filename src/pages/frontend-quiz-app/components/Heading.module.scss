@@ -13,16 +13,5 @@
         @include for-desktop-up {
             margin-bottom: 3rem;
         }
-
-        span:first-child {
-            @include app-font-heading-l;
-        }
-        span:last-child {
-            @include app-font-heading-l(bold);
-        }
-    }
-
-    p {
-        @include app-font-body-s-italic;
     }
 }
