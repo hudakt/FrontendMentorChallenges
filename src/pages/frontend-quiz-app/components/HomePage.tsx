@@ -1,24 +1,33 @@
 import Heading from "./Heading"
-import data from '../data.json';
-import Quiz from "../models/quiz";
 import TextIcon from "./TextIcon";
-import classes from './HomePage.module.scss';
 import { Link } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import AppContext from "../store/AppContext";
+import PageContainer from "./PageContainer";
 
 const HomePage = () => {
-    const quizData = data.quizzes.map((q) => new Quiz(q));
+    const { quizData, onTopicChanged } = useContext(AppContext);
+    
+    useEffect(() => {
+        onTopicChanged('');
+    });
+
+    const quizArray = [];
+    for (let quiz in quizData) {
+        quizArray.push(quizData[quiz]);
+    }
 
     return (
-        <div className="flex flex-col md:justify-between md:flex-row">
+        <PageContainer>
             <Heading regularHeadingValue="Welcome to the" boldHeadingValue="Frontend Quiz!" caption="Pick a subject to get started" />
-            <div className={classes.optionsWrapper}>
-                {quizData.map((quiz, index) =>
-                    <Link to='quiz' key={index} className="quiz-option">
+            <section>
+                {quizArray.map((quiz, index) =>
+                    <Link to={`quiz/${quiz.title}`}  key={index} className="quiz-option">
                         <TextIcon key={index} iconSrc={quiz.icon} title={quiz.title} />
                     </Link>
                 )}
-            </div>
-        </div>
+            </section>
+        </PageContainer>
     )
 }
 

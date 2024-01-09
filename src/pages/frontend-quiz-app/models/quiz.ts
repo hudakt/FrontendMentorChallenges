@@ -24,16 +24,36 @@ interface QuestionData {
 
 class QuizQuestion {
     public question: string = '';
-    public options: Array<string> = [];
+    public options: Array<{value: string; optionLetter: string}> = [];
     public answer: string = '';
 
     constructor(data: QuestionData) {
         this.question = data.question;
         this.answer = data.answer;
-        this.options = data.options;
+        this.options = data.options.map((o, index) => {
+            return {
+                value: o,
+                optionLetter: this.getLetterByIndex(index)
+            }
+        });
     }
 
     public isAnswerValid = (selectedOption: string): boolean => {
         return this.answer === selectedOption;
+    }
+
+    private getLetterByIndex(index: number) {
+        switch(index) {
+            case 0:
+                return 'A';
+            case 1:
+                return 'B';
+            case 2:
+                return 'C';
+            case 3:
+                return 'D';
+            default:
+                return '';
+        }
     }
 }

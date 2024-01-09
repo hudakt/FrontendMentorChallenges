@@ -1,28 +1,12 @@
 @import "../../../styles/variables.scss";
 @import "../styles/appVariables.scss";
 
-.headingWrapper {
+.heading {
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 2.5rem;
-
-    @include for-tablet-portrait-up {
-        margin-bottom: 4rem;
-    }
 
     @include for-desktop-up {
-        width: 50%;
-        margin-bottom: 0;
-    }
-
-    h1 {
-        margin-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-
-        @include for-desktop-up {
-            margin-bottom: 3rem;
-        }
+        margin-bottom: 3rem;
     }
 }

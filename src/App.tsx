@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: '/frontend-quiz-app/quiz',
+        path: '/frontend-quiz-app/quiz/:topic',
         element: <QuizPage />
       }
     ]

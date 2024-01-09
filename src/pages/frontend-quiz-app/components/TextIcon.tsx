@@ -4,6 +4,7 @@ import classes from './TextIcon.module.scss';
 interface TextIconProps {
     iconSrc?: string;
     title?: string;
+    optionLetter?: string;
 }
 
 const TextIcon: React.FC<TextIconProps> = (props) => {
@@ -13,6 +14,8 @@ const TextIcon: React.FC<TextIconProps> = (props) => {
             import('../assets/images/' + props.iconSrc).then((result) => {
                 setIcon(result.default);
             });
+        } else {
+            setIcon(undefined);
         }
     }, [props.iconSrc]);
 
@@ -35,9 +38,9 @@ const TextIcon: React.FC<TextIconProps> = (props) => {
     return (
         <div className='flex justify-start align-middle items-center'>
             <div className={`${classes.imageWrapper} ${classes[iconClass]}`}>
-                <img src={icon} alt="" />
+                { icon ? (<img src={icon} alt="" />) : (<span className='app-font-heading-s app-font-secondary'>{props.optionLetter}</span>)}
             </div>
-            <h1 className='app-font-heading-s'>{props.title}</h1>
+            <span className='app-font-heading-s app-font-bold'>{props.title}</span>
         </div>
     )
 }

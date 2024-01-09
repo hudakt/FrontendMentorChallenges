@@ -11,6 +11,11 @@
         margin: 15%;
     }
 
+    span {
+        margin: auto;
+        @include app-font-heading-s;
+    }
+
     @include for-tablet-portrait-up {
         height: 3.5rem;
         width: 3.5rem;

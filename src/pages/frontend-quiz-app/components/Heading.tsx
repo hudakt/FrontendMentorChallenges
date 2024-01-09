@@ -9,8 +9,8 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = (props) => {
     return (
-        <div className={classes.headingWrapper}>
-            <h1>
+        <section className='heading-wrapper'>
+            <h1 className={classes.heading}>
                 <span className="app-font-heading-l">
                     {props.regularHeadingValue}
                 </span>
@@ -19,7 +19,7 @@ const Heading: React.FC<HeadingProps> = (props) => {
                 </span>
             </h1>
             <p className="app-font-body-s-italic">{props.caption}</p>
-        </div>
+        </section>
     )
 }
 
