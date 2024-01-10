@@ -1,34 +1,34 @@
 @import '../../../styles/variables.scss';
 
 .pageContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
-    @include for-tablet-landscape-up {
-        justify-content: space-between;
-        flex-direction: row;
+    @include for-desktop-up {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 50% 50%;
+    }
+
+    button {
+        @include for-desktop-up {
+            grid-row: 3;
+            grid-column: 2;
+        }
     }
 
     section {
         display: flex;
         flex-direction: column;
-        width: 100%;
-
-        @include for-desktop-up {
-            width: 50%;
-        }
     
         &:first-child {
             margin-bottom: 2.5rem;
     
             @include for-tablet-portrait-up {
                 margin-bottom: 4rem;
-                margin-right: 4rem;
             }
         
             @include for-desktop-up {
-                width: 50%;
                 margin-bottom: 0;
+                margin-right: 4rem;
             }
         }
     }

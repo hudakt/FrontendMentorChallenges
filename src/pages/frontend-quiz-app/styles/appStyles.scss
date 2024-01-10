@@ -24,6 +24,30 @@
         outline-width: 4px;
     }
 }
+progress {
+    width: auto;
+}
+progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 10em;
+    background: #fff;
+    padding: 4px;
+  }
+  progress[value]::-webkit-progress-bar {
+    border-radius: 10em;
+    background: #fff;
+  }
+  progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: $app-purple;
+  }
+  progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: $app-purple;
+  }
 
 .app-font-display {
     font-size: 144px;

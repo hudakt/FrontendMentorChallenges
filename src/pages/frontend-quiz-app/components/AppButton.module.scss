@@ -1,0 +1,32 @@
+@import '../styles/appVariables.scss';
+@import '../../../styles/variables.scss';
+
+.appButton {
+    @include app-font-heading-s;
+    font-weight: bold;
+    width: auto;
+    min-height: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    color: #fff;
+    border: none;
+    background: $app-purple;
+    text-align: center;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+        background-color: #d394fa;
+        box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    }
+
+    @include for-phone-only {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        border-radius: 0.75rem;
+        padding: 0.75rem;
+    }
+}
