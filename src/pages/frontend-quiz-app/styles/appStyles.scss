@@ -50,6 +50,14 @@ p.error-message {
     display: flex;
     justify-content: center;
     
+    &.animate {
+        animation: wiggle 75ms 3;
+    }
+
+    &.hidden {
+        visibility: hidden;
+    }
+    
     img {
         margin-right: .5rem;
     }
@@ -63,6 +71,12 @@ p.error-message {
             font-size: 18px;
         }
     }
+}
+
+@keyframes wiggle {
+    0% { transform: translate(3px, 0); }
+    50% { transform: translate(-3px, 0); }
+    100% { transform: translate(3px, 0); }
 }
 
 .button-wrapper {

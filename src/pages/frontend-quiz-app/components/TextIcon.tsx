@@ -30,7 +30,7 @@ const TextIcon: React.FC<TextIconProps> = (props) => {
                   : undefined
             }`}
          >
-            <img src={icon} alt='' />
+            {icon ? <img src={icon} alt='Topic related icon' /> : undefined}
          </div>
          <span className='app-font-heading-s app-font-bold'>{props.title}</span>
       </div>

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import AppContext from "../store/AppContext";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import PageContainer from "./PageContainer";
 import AppButton from "./AppButton";
 import QuizOption from "./QuizOption";
@@ -22,6 +22,8 @@ const QuizPage = () => {
    const [selectedAnswer, setSelectedAnswer] = useState("");
    const [score, setScore] = useState(0);
    const [quizFinished, setQuizFinished] = useState(false);
+
+   const errMsgRef = useRef<HTMLParagraphElement>(null);
 
    const topic = params.topic;
    if (!topic) return null;
@@ -47,6 +49,18 @@ const QuizPage = () => {
       } else {
          setShowErrMsg(true);
          setAnswerSubmitted(false);
+         if (errMsgRef.current) {
+            const classList = errMsgRef.current.classList;
+            if (classList.contains("hidden")) {
+               classList.remove("hidden");
+            }
+            if (classList.contains("animate")) {
+               classList.remove("animate");
+            }
+            setTimeout(() => {
+               classList.add("animate");
+            }, 0);
+         }
       }
    };
 
@@ -162,12 +176,15 @@ const QuizPage = () => {
                      onButtonClicked={(e) => {}}
                   />
                )}
-               {showErrMsg ? (
-                  <p className='error-message'>
-                     <img src={errIcon} alt='' />
-                     <span>Please select an answer</span>
-                  </p>
-               ) : undefined}
+               <p
+                  className={
+                     showErrMsg ? "error-message" : "error-message hidden"
+                  }
+                  ref={errMsgRef}
+               >
+                  <img src={errIcon} alt='Error icon' />
+                  <span>Please select an answer</span>
+               </p>
             </div>
          </PageContainer>
       </form>
