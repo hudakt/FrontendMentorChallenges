@@ -1,14 +1,17 @@
 @import '../styles/appVariables.scss';
 
 .imageWrapper {
-    height: 2.5rem;
-    width: 2.5rem;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
     border-radius: 20%;
     margin-right: 1rem;
     display: flex;
 
     img {
         margin: 15%;
+        @include for-phone-only {
+            max-width: 1.8rem;
+        }
     }
 
     span {
@@ -17,8 +20,8 @@
     }
 
     @include for-tablet-portrait-up {
-        height: 3.5rem;
-        width: 3.5rem;
+        min-height: 3.5rem;
+        min-width: 3.5rem;
         margin-right: 1.5rem;
     }
 }
@@ -35,7 +38,3 @@
 .javascript {
     background-color: $app-light-blue;
 }
-.greyIconBg {
-    background-color: $app-light-grey;
-}
-

@@ -1,14 +1,14 @@
 @import "./appVariables.scss";
 @import "../../../styles/variables.scss";
 
-.quiz-option {
+.quiz-option-common {
     display: block;
     padding: .75rem;
     background: var(--bg-color-secondary);
     box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
     border-radius: .75rem;
     margin-bottom: .75rem;
-    
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -23,7 +23,58 @@
         outline-color: $app-purple;
         outline-width: 4px;
     }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
+
+.quiz-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color-secondary);
+    border-radius: 0.75rem;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    padding: 2rem;
+
+    @include for-tablet-landscape-up {
+        padding: 3rem;
+        border-radius: 1.5rem;
+    }
+
+}
+
+p.error-message {
+    display: flex;
+    justify-content: center;
+    
+    img {
+        margin-right: .5rem;
+    }
+    
+    span {
+        color: var(--text-color-error);
+        line-height: 150%;
+        font-size: 24px;
+
+        @include for-phone-only {
+            font-size: 18px;
+        }
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include for-desktop-up {
+        grid-row: 3;
+        grid-column: 2;
+    }
+}
+
 progress {
     width: auto;
 }
@@ -104,6 +155,17 @@ progress[value] {
     }
 }
 
+.app-font-body-m {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: normal;
+    color: var(--text-color-secondary);
+
+    @include for-phone-only {
+        font-size: 18px;
+    }
+}
+
 .app-font-body-s-italic {
     font-size: 20px;
     line-height: 150%;
@@ -119,6 +181,7 @@ progress[value] {
 .light {
     --text-color-primary: #{$app-dark-navy};    
     --text-color-secondary: #{$app-grey-navy};
+    --text-color-error: #{$app-red};
     --bg-color-primary: #{$app-light-grey};
     --bg-color-secondary: #fff;
     --bg-image-desktop: url('../assets/images/pattern-background-desktop-light.svg');
@@ -128,6 +191,7 @@ progress[value] {
 
 .dark {
     --text-color-primary: #fff;
+    --text-color-error: #fff;
     --text-color-secondary: #{$app-light-bluish};
     --bg-color-primary: #{$app-dark-navy};
     --bg-color-secondary: #{$app-navy};

@@ -1,15 +1,22 @@
-import React from 'react';
-import classes from './AppButton.module.scss';
+import React from "react";
+import classes from "./AppButton.module.scss";
 
 interface AppButtonProps {
-    title: string;
-    onButtonClicked: () => void;
+   title: string;
+   onButtonClicked: (
+      event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+   ) => void;
 }
 
 const AppButton: React.FC<AppButtonProps> = (props) => {
-    return (
-        <button className={classes.appButton} onClick={props.onButtonClicked}>{props.title}</button>
-    )
-}
+   return (
+      <button
+         className={classes.appButton}
+         onClick={(e) => props.onButtonClicked(e)}
+      >
+         {props.title}
+      </button>
+   );
+};
 
 export default AppButton;
