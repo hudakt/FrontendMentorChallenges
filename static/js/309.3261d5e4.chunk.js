@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[309],{309:(e,n,t)=>{e.exports=t.p+"static/media/pattern-background-mobile-light.2a1f70bd700b2be97b86.svg"}}]);

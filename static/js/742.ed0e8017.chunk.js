@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[742],{742:(e,n,t)=>{e.exports=t.p+"static/media/pattern-background-desktop-dark.e211d976d5b431130f82.svg"}}]);

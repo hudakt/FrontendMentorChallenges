@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[407],{407:(e,t,n)=>{e.exports=n.p+"static/media/pattern-background-tablet-light.72e6cda6148dc11584fb.svg"}}]);

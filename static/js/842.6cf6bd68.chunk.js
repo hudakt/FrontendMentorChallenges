@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[842],{842:(e,n,s)=>{e.exports=s.p+"static/media/icon-incorrect.22188a658072577ad2be.svg"}}]);

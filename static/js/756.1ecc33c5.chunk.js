@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[756],{756:(e,n,s)=>{e.exports=s.p+"static/media/icon-sun-dark.397b32a9036f98ca2742.svg"}}]);

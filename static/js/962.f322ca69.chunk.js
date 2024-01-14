@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[962],{962:(e,n,s)=>{e.exports=s.p+"static/media/icon-moon-light.8ce3add6042354c900e1.svg"}}]);

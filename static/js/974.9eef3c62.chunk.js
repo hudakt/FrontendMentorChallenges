@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend_mentor_challenges=self.webpackChunkfrontend_mentor_challenges||[]).push([[974],{974:(e,n,s)=>{e.exports=s.p+"static/media/icon-moon-dark.31aa7165f1fc864be0b9.svg"}}]);
